@@ -1,25 +1,13 @@
-<<<<<<< HEAD
-/*general styling*/
-
-@keyframes show {
-    from {
-        opacity: 0;
-    }
-    to {
-=======
-
-
 /*general styling*/
 
 @keyframes show {
     0% {
         opacity: 0;
     }
-    50%{
+    50% {
         opacity: 0.5;
     }
     100% {
->>>>>>> 91aa30cb457711deefe7b743c819eb09718b4953
         opacity: 1;
     }
 }
@@ -35,16 +23,6 @@ nav ul {
 
 /*header*/
 
-<<<<<<< HEAD
-header {
-    background-repeat: no-repeat;
-    background-size: 100%;
-    animation-name: show;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
-=======
-
-
 header {
     color: aqua;
     background-image: url(../img/1.jpg);
@@ -53,23 +31,16 @@ header {
     animation-name: show;
     animation-duration: 3s;
     animation-iteration-count: infinite;
-
-
 }
-.overlay{
-
+.overlay {
     background-image: url(../img/overlay.png);
-     background-repeat: repeat;
+    background-repeat: repeat;
     z-index: 1;
-
-
->>>>>>> 91aa30cb457711deefe7b743c819eb09718b4953
 }
 .title {
     text-align: center;
     padding: 20% 0;
 }
-<<<<<<< HEAD
 .heading h1 {
     animation-name: zoomOut;
     animation-duration: 3s;
@@ -82,20 +53,16 @@ header {
     margin: 10%;
 }
 .content {}
-=======
 
 /*main content*/
 
-
 .mid {
     margin: 10%;
-
 }
 .content {
     background-color: grey;
     color: whitesmoke;
 }
->>>>>>> 91aa30cb457711deefe7b743c819eb09718b4953
 
 /*last section*/
 
@@ -105,157 +72,119 @@ header {
     background-image: url(../img/5.jpg);
     background-repeat: no-repeat;
     background-size: 100% 120%;
-<<<<<<< HEAD
 }
 
 /*opacity tarnsition*/
 
-header
-=======
-
-
-    background-image:url(../img/overlay.png) repeat;
+background-image:url(../img/overlay.png) repeat;
 
 }
-.last::after{
+.last::after {
     content: "";
-    background:url(../img/overlay.png);
-     background-repeat: repeat;
+    background: url(../img/overlay.png);
+    background-repeat: repeat;
     z-index: -1;
     position: absolute;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
-
 }
-
-
-
 @import "compass/css3";
-
 // Sass Mixins
-
 // Animation Mixin
-
 @mixin animate($animation, $duration, $repeat, $easing) {
-	-webkit-animation: $animation $duration $repeat $easing;
-	   -moz-animation: $animation $duration $repeat $easing;
-	    -ms-animation: $animation $duration $repeat $easing;
-	        animation: $animation $duration $repeat $easing;
+    -webkit-animation: $animation $duration $repeat $easing;
+    -moz-animation: $animation $duration $repeat $easing;
+    -ms-animation: $animation $duration $repeat $easing;
+    animation: $animation $duration $repeat $easing;
 }
-
-
 // Keyframes Mixin
 // https://gist.github.com/ericam/1607696
-
 @mixin keyframes($name) {
-	@-webkit-keyframes #{$name} {
-		@content;
-	}
-	@-moz-keyframes #{$name} {
-		@content;
-	}
-	@-ms-keyframes #{$name} {
-		@content;
-	}
-	@keyframes #{$name} {
-		@content;
-	}
+    @-webkit-keyframes #{$name} {
+        @content;
+    }
+    @-moz-keyframes #{$name} {
+        @content;
+    }
+    @-ms-keyframes #{$name} {
+        @content;
+    }
+    @keyframes #{$name} {
+        @content;
+    }
 }
-
-
 // Main Styles
-
 html,
 body {
-  height: 100%;
+    height: 100%;
 }
-
 body {
-  background: #09f;
-
-  @include background-image(linear-gradient(bottom, #09f, #45d1ff));
+    background: #09f;
+    @include background-image(linear-gradient(bottom, #09f, #45d1ff));
 }
-
 .bubble-toggle {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  padding: 10px;
-  background: rgba(255,255,255,0.5);
-  font-family: sans-serif;
-  font-size: 13px;
-  color: #333;
-
-  &:hover {
-    background: rgba(255,255,255,0.75);
-  }
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.5);
+    font-family: sans-serif;
+    font-size: 13px;
+    color: #333;
+    &:hover {
+        background: rgba(255, 255, 255, 0.75);
+    }
 }
-
-
 // Bubble Styles
-
 .bubbles {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
-  margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
 }
-
 .bubble-container {
-	position: absolute;
-	bottom: 0;
+    position: absolute;
+    bottom: 0;
     will-change: transform;
-
-  @include animate(bubblerise, 4s, infinite, ease-in);
-  @include opacity(0);
+    @include animate(bubblerise, 4s, infinite, ease-in);
+    @include opacity(0);
 }
-
 .bubble {
-	width: 6px;
-	height: 6px;
-	margin: 0 auto;
-	border: 1px solid rgba(255,255,255,0.5);
-	background: rgba(255,255,255,0.25);
+    width: 6px;
+    height: 6px;
+    margin: 0 auto;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.25);
     will-change: transform;
-
-  @include border-radius(10px);
-  @include animate(bubblewobble, 0.4s, infinite, linear);
+    @include border-radius(10px);
+    @include animate(bubblewobble, 0.4s, infinite, linear);
 }
-
-
 // Keyframe Animations
-
 @include keyframes(bubblerise) {
-	0% {
-		bottom: 0;
-
-    @include opacity(0);
-	}
-	5% {
-		bottom: 0;
-
-    @include opacity(1);
-	}
-	99% {
-		@include opacity(1);
-	}
-	100% {
-		bottom: 100%;
-
-    @include opacity(0);
-	}
+    0% {
+        bottom: 0;
+        @include opacity(0);
+    }
+    5% {
+        bottom: 0;
+        @include opacity(1);
+    }
+    99% {
+        @include opacity(1);
+    }
+    100% {
+        bottom: 100%;
+        @include opacity(0);
+    }
 }
-
-
 @include keyframes(bubblewobble) {
-	0% {
-		margin-left: 0;
-	}
-	50% {
-		margin-left: 2px;
-	}
+    0% {
+        margin-left: 0;
+    }
+    50% {
+        margin-left: 2px;
+    }
 }
->>>>>>> 91aa30cb457711deefe7b743c819eb09718b4953
