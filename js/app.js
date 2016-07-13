@@ -21,7 +21,7 @@ function slider() {
    
 }
 //interval
-setInterval(slider, 4000);
+setInterval(slider, 3000);
 
 
 
