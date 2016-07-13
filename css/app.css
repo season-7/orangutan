@@ -1,0 +1,59 @@
+/*general styling*/
+
+@keyframes show {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/*navigation*/
+
+.logo {
+    float: left;
+}
+nav ul {
+    float: right;
+}
+
+/*header*/
+
+header {
+    background-repeat: no-repeat;
+    background-size: 100%;
+    animation-name: show;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+.title {
+    text-align: center;
+    padding: 20% 0;
+}
+.heading h1 {
+    animation-name: zoomOut;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+/*main content*/
+
+.mid {
+    margin: 10%;
+}
+.content {}
+
+/*last section*/
+
+.last {
+    padding: 20% 0;
+    text-align: center;
+    background-image: url(../img/5.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 120%;
+}
+
+/*opacity tarnsition*/
+
+header
